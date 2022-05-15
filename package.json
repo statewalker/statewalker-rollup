@@ -1,5 +1,5 @@
 {
-  "name": "@statewalker/statewalker-rollup",
+  "name": "@statewalker/rollup",
   "version": "0.1.0",
   "description": "Rollup conifguration used by StateWalker projects",
   "keywords": [],
@@ -8,7 +8,7 @@
     "name": "Mikhail Kotelnikov",
     "email": "mikhail.kotelnikov@gmail.com"
   },
-  "type": "module",
+  "type": "commonjs",
   "files": [
     "src/**/*.js",
     "index.js"
