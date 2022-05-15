@@ -18,7 +18,7 @@ module.exports = function (meta, options = {}) {
     .filter(name => name.indexOf(`@${ns}`) === 0)
     .reduce((index, name) => (index[name] = replace(name), index), {});
   const config = {
-    input: "src/index.js",
+    input: "index.js",
     external: (options.external || []).concat(Object.keys(nsPackages)),
     output: {
       file: `dist/${distFileName}.js`,
