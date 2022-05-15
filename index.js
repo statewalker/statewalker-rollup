@@ -15,11 +15,12 @@ module.exports = function (meta, options = {}) {
   const distFileName = "index";
   const nsPackages = Object
     .keys(meta.dependencies || {})
-    .filter(name => name.indexOf(`@${ns}`) === 0)
+    .filter(name => name.indexOf(`@${ns}`) === 0 && name !== `@${ns}/ns`)
     .reduce((index, name) => (index[name] = replace(name), index), {});
+
   const config = {
     input: "index.js",
-    external: (options.external || []).concat(Object.keys(nsPackages)),
+    external: (options.external || []).concat(Object.keys(nsPackages)).filter(name => name !== `@${ns}/ns`),
     output: {
       file: `dist/${distFileName}.js`,
       name: replace(meta.name),
