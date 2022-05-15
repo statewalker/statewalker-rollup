@@ -1,6 +1,6 @@
 {
   "name": "@statewalker/rollup",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rollup conifguration used by StateWalker projects",
   "keywords": [],
   "homepage": "https://github.com/statewalker/statewalker-rollup",
