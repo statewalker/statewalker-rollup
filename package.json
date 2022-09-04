@@ -9,7 +9,7 @@
     "email": "mikhail.kotelnikov@gmail.com"
   },
   "scripts": {
-    "test": "",
+    "test": "echo 'Skip...'",
     "rollup": ""
   },
   "type": "commonjs",
