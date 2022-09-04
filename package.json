@@ -21,7 +21,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/statewalker/statewalker-rollup.git"
+    "url": "git@github.com:statewalker/statewalker-rollup.git"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^22",
