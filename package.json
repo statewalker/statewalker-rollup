@@ -1,6 +1,6 @@
 {
   "name": "@statewalker/rollup",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Rollup conifguration used by StateWalker projects",
   "keywords": [],
   "homepage": "https://github.com/statewalker/statewalker-rollup",
@@ -9,8 +9,8 @@
     "email": "mikhail.kotelnikov@gmail.com"
   },
   "scripts": {
-    "test": "echo 'Skip...'",
-    "rollup": ""
+    "test": "echo 'Skip.'",
+    "rollup": "echo 'Skip.'"
   },
   "type": "commonjs",
   "files": [
