@@ -3,11 +3,15 @@ const { terser } = require("rollup-plugin-terser");
 const { nodeResolve } = require("@rollup/plugin-node-resolve");
 const commonjs = require("@rollup/plugin-commonjs");
 const inject = require("@rollup/plugin-inject");
+const fs = require("fs");
+const path = require("path");
 
 // import builtins from "rollup-plugin-node-builtins";
 // import globals from "rollup-plugin-node-globals";
 
-module.exports = function (meta, options = {}) {
+module.exports = function ({ url }, options = {}) {
+  const packageFilePath = path.join(path.dirname(new URL(url).pathname), "./package.json");
+  const meta = JSON.parse(fs.readFileSync(packageFilePath, 'UTF-8'));
   const ns = meta.name.replace(/^@(.*)\/.*$/, '$1');
   const regexp = new RegExp(`^@(${ns})\\/(.*)$`, 'gi');
   const replace = (name) => name.replace(regexp, '$1.$2'); // .replace(/[/-]/gi, '_');
