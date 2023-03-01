@@ -38,7 +38,7 @@ module.exports = function ({ url }, options = {}) {
       inject(Object.assign({}, options.globals)),
       // builtins(),
       // globals(),
-      nodeResolve(),
+      nodeResolve({ preferBuiltins: false }),
       commonjs()
     ]
   };
